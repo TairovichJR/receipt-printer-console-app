@@ -39,5 +39,11 @@ public class CD implements SalesTaxedItems{
 	public boolean isImported() {
 		return imported;
 	}
+
+	@Override
+	public String toString() {
+		return "CD [name=" + name + ", price=" + price + ", imported=" + imported + "]";
+	}
+	
 	
 }

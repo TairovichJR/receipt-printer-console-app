@@ -48,9 +48,6 @@ public class Book implements SalesTaxFreeItems {
 	public String toString() {
 		return "Book [name=" + name + ", price=" + price + ", imported=" + imported + "]";
 	}	
-	
-	
-	private static List<String> bookNames = Arrays.asList("Titanic", "Shawshank Redemption", "Rich Dad Poor Dad",
-			"Monarch Who Sold His Ferrari", "Think And Grow Rich", "10X Rule", "Intro to CS");
+
 	
 }

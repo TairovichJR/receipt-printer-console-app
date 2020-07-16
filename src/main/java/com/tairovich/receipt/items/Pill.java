@@ -1,12 +1,12 @@
 package com.tairovich.receipt.items;
 
-public class Chocolate implements SalesTaxFreeItems  {
+public class Pill implements SalesTaxFreeItems {
 
 	private String name;
 	private double price;
 	private boolean imported;
 
-	public Chocolate(String name, double price, boolean imported) {
+	public Pill(String name, double price, boolean imported) {
 		this.name = name;
 		this.price = price;
 		this.imported = imported;
@@ -43,7 +43,9 @@ public class Chocolate implements SalesTaxFreeItems  {
 
 	@Override
 	public String toString() {
-		return "Chocolate [name=" + name + ", price=" + price + ", imported=" + imported + "]";
+		return "Pill [name=" + name + ", price=" + price + ", imported=" + imported + "]";
 	}
-	
+
+		
+
 }

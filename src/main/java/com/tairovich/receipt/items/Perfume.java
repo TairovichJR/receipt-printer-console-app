@@ -1,12 +1,11 @@
 package com.tairovich.receipt.items;
 
-public class Chocolate implements SalesTaxFreeItems  {
-
+public class Perfume implements SalesTaxedItems {
 	private String name;
 	private double price;
 	private boolean imported;
 
-	public Chocolate(String name, double price, boolean imported) {
+	public Perfume(String name, double price, boolean imported) {
 		this.name = name;
 		this.price = price;
 		this.imported = imported;
@@ -17,7 +16,7 @@ public class Chocolate implements SalesTaxFreeItems  {
 		if(imported) {
 			dutyCost = dutyCost + (DUTY_Tax * this.price);
 		}
-		return dutyCost;
+		return dutyCost + (this.price * SALES_TAX);
 	}
 	
 	public double getAllCalculatedCost() {
@@ -32,18 +31,18 @@ public class Chocolate implements SalesTaxFreeItems  {
 	public String getName() {
 		return name;
 	}
-
+	
 	public double getPrice() {
 		return price;
 	}
-	
+
 	public boolean isImported() {
 		return imported;
 	}
 
 	@Override
 	public String toString() {
-		return "Chocolate [name=" + name + ", price=" + price + ", imported=" + imported + "]";
+		return "Perfume [name=" + name + ", price=" + price + ", imported=" + imported + "]";
 	}
 	
 }

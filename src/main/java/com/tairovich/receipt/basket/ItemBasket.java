@@ -15,10 +15,10 @@ public class ItemBasket implements ICart{
 	
 
 	public void showAllItems() {
-		System.out.println("\n#### Available items in the Shop #####\n");
+		System.out.println("\n****************** Today's available items in the shop ******************\n");
 		for (int i = 0; i < availableItems.size(); i++) {
 			System.out
-					.println(i + " - " + availableItems.get(i).getName() + " at $" + availableItems.get(i).getPrice());
+					.println(availableItems.get(i).getClass().getSimpleName() + "  -  " + availableItems.get(i).getName() + " at $" + availableItems.get(i).getPrice());
 		}
 		System.out.println("\n");
 	}
@@ -30,14 +30,14 @@ public class ItemBasket implements ICart{
 		}
 		double salesTax = 0.0, totalPriceOnAllItems = 0.0;
 		for (int i = 0; i < addedItems.size(); i++) {
-			System.out.println(addedItems.get(i).getClass().getSimpleName() + " :: "+ addedItems.get(i).getName() + " at " + " $" + addedItems.get(i).getAllCalculatedCost()
-					+ " Imported Item: " + addedItems.get(i).isImported());
+			System.out.println(addedItems.get(i).getClass().getSimpleName() + " :: "+ addedItems.get(i).getName() + " at $" + addedItems.get(i).getAllCalculatedCost()
+					+ "       |  Imported Item: " +"[" +addedItems.get(i).isImported() + "]");
 			salesTax += addedItems.get(i).getDutyTaxedCost();
 			totalPriceOnAllItems += addedItems.get(i).getAllCalculatedCost();
 		}
-		System.out.println("----------------------------------------------------------------------------------");
+		System.out.println("\n----------------------------------------------------------------------------------");
 		System.out.println(
-				"Your total Transaction is:  Sales Tax: $" + salesTax + " Total Cost: $" + totalPriceOnAllItems);
+				"Your total payment will be:   Total Tax: $" + salesTax + "      |        Total Cost: $" + totalPriceOnAllItems);
 		return addedItems;
 	}
 
@@ -99,7 +99,7 @@ public class ItemBasket implements ICart{
 
 		boolean flag = true;
 		while (flag) {
-			System.out.println("0 - Start Shopping    |     1 - Quit");
+			System.out.println("0 - Start Shopping    |    1 - Quit");
 			int option = s.nextInt();
 
 			if (option == 0) {
@@ -168,13 +168,13 @@ public class ItemBasket implements ICart{
 				}
 	
 			} else if (action.equalsIgnoreCase("checkout")) {
-				System.out.println("----- This is your cart -------");
+				System.out.println("------------- This is your cart -------------");
 				List<IAllSalesItems> checkoutItems = checkout();
 				if (checkoutItems == null || checkoutItems.size() == 0) {
 					continue;
 				} else {
 					System.out.println(
-							"To complete transaction enter 'Complete'. Enter 'Cancel' to cancel your transcation");
+							"\nTo complete transaction enter 'Complete'. Enter 'Cancel' to cancel your transcation");
 					String finalAction = s.next();
 
 					while (true) {
