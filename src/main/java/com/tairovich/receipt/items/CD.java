@@ -1,13 +1,11 @@
 package com.tairovich.receipt.items;
 
-
-public class Book implements SalesTaxFreeItems {
-
+public class CD implements SalesTaxedItems{
 	private String name;
 	private double price;
 	private boolean imported;
 
-	public Book() {
+	public CD() {
 		
 	}
 	
@@ -16,7 +14,7 @@ public class Book implements SalesTaxFreeItems {
 		if(imported) {
 			dutyCost = dutyCost + (DUTY_Tax * this.price);
 		}
-		return dutyCost;
+		return dutyCost + (this.price * SALES_TAX);
 	}
 	
 	public double getAllCalculatedCost() {
@@ -46,13 +44,4 @@ public class Book implements SalesTaxFreeItems {
 	public void setImported(boolean imported) {
 		this.imported = imported;
 	}
-
-
-	@Override
-	public String toString() {
-		return "Book [name=" + name + ", price=" + price + ", imported=" + imported + "]";
-	}	
-
-	
-	
 }

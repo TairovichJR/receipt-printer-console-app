@@ -2,11 +2,14 @@ package com.tairovich.receipt.cart;
 
 import java.util.List;
 
-import com.tairovich.receipt.items.Items;
+import com.tairovich.receipt.items.IAllSalesItems;
+
+
+
 
 public interface ICart {
 
-	public List<Items> checkout();
+	public List<IAllSalesItems> checkout();
 
 	public void showAllItems();
 
@@ -16,6 +19,6 @@ public interface ICart {
 
 	public void reloadCart();
 
-	public void showCurrentCart(List<Items> items);
+	public void showCurrentCart(List<IAllSalesItems> items);
 
 }
