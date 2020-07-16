@@ -1,13 +1,14 @@
 package com.tairovich.receipt;
 
-import com.tairovich.receipt.basket.BookBasket;
+import com.tairovich.receipt.basket.ItemBasket;
 
 public class ReceiptPrinter {
 
 	public static void main(String[] args) {
 		
 		
-		BookBasket.start();
+		ItemBasket basket = new ItemBasket();
+		basket.start();
 		
 		
 		

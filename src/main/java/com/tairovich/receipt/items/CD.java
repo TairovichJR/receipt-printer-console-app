@@ -5,8 +5,10 @@ public class CD implements SalesTaxedItems{
 	private double price;
 	private boolean imported;
 
-	public CD() {
-		
+	public CD(String name, double price, boolean imported) {
+		this.name = name;
+		this.price = price;
+		this.imported = imported;
 	}
 	
 	public double getDutyTaxedCost() {
@@ -29,19 +31,13 @@ public class CD implements SalesTaxedItems{
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
+
 	public boolean isImported() {
 		return imported;
 	}
-	public void setImported(boolean imported) {
-		this.imported = imported;
-	}
+	
 }

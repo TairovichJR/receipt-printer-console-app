@@ -19,6 +19,9 @@ public interface ICart {
 
 	public void reloadCart();
 
+	public IAllSalesItems findItem(int index);
+	
 	public void showCurrentCart(List<IAllSalesItems> items);
 
+	public void shopItems();
 }
