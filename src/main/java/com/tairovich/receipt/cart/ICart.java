@@ -4,9 +4,6 @@ import java.util.List;
 
 import com.tairovich.receipt.items.IAllSalesItems;
 
-
-
-
 public interface ICart {
 
 	public List<IAllSalesItems> checkout();

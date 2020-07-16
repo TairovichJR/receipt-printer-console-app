@@ -1,4 +1,4 @@
-package com.tairovich.receipt;
+package com.tairovich.receiptRunner;
 
 import com.tairovich.receipt.basket.ItemBasket;
 
@@ -11,10 +11,7 @@ public class ReceiptPrinter {
 		basket.start();
 		
 		
-		
-		
+
 	}
-	
-	
-	
+
 }

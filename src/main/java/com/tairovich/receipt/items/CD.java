@@ -4,7 +4,8 @@ public class CD implements SalesTaxedItems{
 	private String name;
 	private double price;
 	private boolean imported;
-
+	
+	
 	public CD(String name, double price, boolean imported) {
 		this.name = name;
 		this.price = price;

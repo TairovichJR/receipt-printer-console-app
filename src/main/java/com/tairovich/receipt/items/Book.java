@@ -3,16 +3,20 @@ package com.tairovich.receipt.items;
 import java.util.Arrays;
 import java.util.List;
 
+import com.tairovich.receipt.utils.ProjectUtils;
+
 public class Book implements SalesTaxFreeItems {
 
 	private String name;
 	private double price;
 	private boolean imported;
-
+	ProjectUtils utils;
+	
 	public Book(String name, double price, boolean imported) {
 		this.name = name;
 		this.price = price;
 		this.imported = imported;
+		
 	}
 	
 	public double getDutyTaxedCost() {

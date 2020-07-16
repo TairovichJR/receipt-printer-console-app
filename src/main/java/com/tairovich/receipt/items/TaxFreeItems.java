@@ -1,4 +1,4 @@
-package com.tairovich.receipt.taxFreeItems;
+package com.tairovich.receipt.items;
 
 import java.util.Map;
 
